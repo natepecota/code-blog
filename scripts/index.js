@@ -1,20 +1,18 @@
-$(document).ready(function(){
-  blog.sortRawData();
-  blog.createArticles();
-});
-
 $(function() {
-  blog.truncateArticles();
-});
+  //Set up the blog with the raw data
+  blog.sortArticles();
+  blog.importArticles();
 
-$(function() {
-  blog.revealArticles();
-});
+  // Load the articles into the blogging system
+  blog.articles.forEach(blog.appendArticle);
 
-$(function() {
-  blog.filterArticles();
-});
+  // After lead-in paragraph, reveal only on button click
+  blog.setTeasers();
 
-$(function () {
-  blog.makeTabsWork();
+  // Add behaviors
+  blog.populateFilters();
+  blog.handleAuthorFilter();
+  blog.handleCategoryFilter();
+
+  blog.handleMainNav();
 });
