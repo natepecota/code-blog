@@ -1,37 +1,72 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="UTF-8">
     <title>My First Blog</title>
-    <link rel="css/stylesheet" href="index.css">
+    <link rel="stylesheet" type="text/css" href="styles/index.css">
+    <link rel="stylesheet" type="text/css" href="os-styles/normalize.css">
+    <link rel="stylesheet" type="text/css" href="os-styles/skeleton.css">
   </head>
     <body>
       <header>
         <h1 id="blogTitle">
-          A Blog of Articles
+          Nate's Blog That Looks Like A Blog And Pretty Much Functions Like A Blog But Doesn't Quite Function Like A Blog...
         </h1>
-        <nav>
-          <ul>
-            <li class="menu">Home</li>
-            <li class="menu">Articles</li>
-            <li class="menu">Twitter</li>
-            <li class="menu">Github</li>
-          </ul>
-        </nav>
+        <div class="nav">
+      	  <ul class="nav nav-tabs">
+      			<li class="active">
+      				  <a href="#tab1">Home</a>
+      			</li>
+      			<li>
+      				<a href="#tab2">About</a>
+      			</li>
+      			<li>
+      				<a href="#tab3">Github</a>
+      			</li>
+      		</ul>
+    		</div>
+    		<section id="tab1" class="tab-content active">
+          <form id="authorFilter">
+            <select id="authorSelect">
+              <option class="authorMenuItem" value="none">Filter by Author</option>
+            </select>
+          </form>
+          <form id="catFilter">
+            <select id="catSelect">
+              <option class="catMenuItem" value="none">Filter by Category</option>
+            </select>
+          </form>
+    			<div>
+            <main>
+              <article id="template">
+                <h1 class="title"></h1>
+                <h3 class="author"></h3>
+                <div class="body"></div>
+                <h4 class="category"></h4>
+                <h4 class="publishedOn"></h4>
+                <h4 class="authorUrl"></h4>
+                <button class="read-on">Read on --></button>
+              </article>
+            </main>
+    			</div>
+    		</section>
+    		<section id="tab2" class="tab-content hide">
+    			<div>
+    				<p>
+    				  I love to sleep. I like to eat all the foods. I like to lift heavy things everyday.
+    				</p>
+    			</div>
+    		</section>
+    		<section id="tab3" class="tab-content hide">
+    			<div>
+            <a href="https://github.com/natepecota">https://github.com/natepecota</a>
+    			</div>
+    		</section>
       </header>
-      <main>
-        <article id="template">
-          <h1 class="title"></h1>
-          <h3 class="author"></h3>
-          <div class="body"></div>
-          <h4 class="category"></h4>
-          <h4 class="publishedOn"></h4>
-          <h4 class="authorUrl"></h4>
-        </article>
-      </main>
       <footer>
-
+        Created by Nate Pecota Copyright 2015
       </footer>
-    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
     <script src="scripts/article.js"></script>
     <script src="scripts/blog.js"></script>
     <script src="scripts/blogArticles.js"></script>
