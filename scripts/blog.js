@@ -1,12 +1,23 @@
 var blog = {};
 blog.articles = [];
 
-blog.sortArticles = function() {
-  blog.rawData.sort(function(a,b) {
-    return a.publishedOn < b.publishedOn;
+blog.loadArticles = function() {
+  $.get('templates/article.handlebars', function(data, message, xhr) {
+    Article.prototype.template = Handlebars.compile(data);
+    $.ajax({
+      type: 'HEAD',
+      url: 'scripts/hackerIpsum.json',
+      success: blog.fetchArticles
+    });
   });
 };
 
+// blog.sortArticles = function() {
+//   blog.rawData.sort(function(a,b) {
+//     return a.publishedOn < b.publishedOn;
+//   });
+// };
+//
 blog.importArticles = function() {
   blog.rawData.forEach(function(ele) {
     blog.articles.push(new Article(ele));

@@ -1,6 +1,7 @@
 $(function() {
   //Set up the blog with the raw data
-  blog.sortArticles();
+  // blog.sortArticles();
+  blog.loadArticles();
   blog.importArticles();
 
   // Load the articles into the blogging system
