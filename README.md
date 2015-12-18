@@ -9,3 +9,7 @@ Attributions: Pat helped me with getting the categories/authors in my drop downs
 Assignments 3/4/5:
 
 Attributions: Brook was kind enough to put up the class code for us to use to get our blogs current with where we should be through assignment 5. I used it because I had gotten behind and he suggested we use it so we can better focus on the assignments going forward. A big thanks to Brook for doing that, it helped me a lot.
+
+Assignments 6/7:
+
+Attributions: Between provided lecture code and my own coding attempts (some of which are commented out) I believe this fulfills most of the MVP requirements for assignments 6 and 7. 
